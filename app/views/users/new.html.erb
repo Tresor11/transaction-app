@@ -1,0 +1,10 @@
+<%= render 'shared/header', text:"SIGN-UP", path:root_path %>
+<div class="container">
+<div class="form-container">
+<h1>LOGIN</h1>
+<%= form_with(model:@user)do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Signup",class:'button bg-blue' %>
+<% end %>
+</div>
+</div>

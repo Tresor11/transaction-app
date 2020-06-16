@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: tresor11
+  api_key: '472436555693823'
+  api_secret: rq1cU9NwEY4fyAIQY3BJfiMibBU
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: tresor11
+  api_key: '472436555693823'
+  api_secret: rq1cU9NwEY4fyAIQY3BJfiMibBU
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: tresor11
+  api_key: '472436555693823'
+  api_secret: rq1cU9NwEY4fyAIQY3BJfiMibBU
+  enhance_image_tag: true
+  static_file_support: false
