@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class TransactionsController < ApplicationController
   def index
     @sum = current_user.transactions.where.not(group_id: [nil]).sum('amount')
