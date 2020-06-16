@@ -2,48 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $f-size:2.5rem;
-$bg-blue:rgb(55, 120, 194);;
+$bg-blue:rgb(55, 120, 194);
+;
 $bg-rad:linear-gradient(to top, #3084C2, #102F5D);
 
-.d-flex{
+.d-flex {
     display: flex;
 }
-.f-bold{
+
+.f-bold {
     font-weight: bold;
 }
-.space-b{
+
+.space-b {
     justify-content: space-between;
 }
 
-.bg-green{
+.bg-green {
     background-color: rgb(96, 181, 36)
 }
 
-.flex-c{
+.flex-c {
     flex-direction: column;
 }
-body{
+
+body {
     background-color: rgb(233, 233, 233);
     font-size: $f-size;
 }
 
-img{
+img {
     width: 100%;
     height: auto;
 }
-.container{
+
+.container {
     width: 100%;
-    a{
+
+    a {
         text-decoration: none;
     }
 }
 
-.bg-blue{
+.bg-blue {
     background: $bg-blue;
     color: white;
 }
 
-.button{
+.button {
     margin: 5px;
     padding: 4% 0;
     text-decoration: none;
@@ -52,111 +58,126 @@ img{
     font-size: $f-size;
 }
 
-.login{
+.login {
     width: 80%;
     margin: 30% auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1{
+
+    h1 {
         margin-bottom: 20%;
         text-align: center;
     }
-    .button{
+
+    .button {
         width: 100%;
     }
 }
 
-.form-container{
+.form-container {
     width: 90%;
     margin: 30% auto;
     text-align: center;
-    form{
-        label{
+
+    form {
+        label {
             padding: 8px;
         }
-        input[type="text"],input[type="number"]{
+
+        input[type="text"],
+        input[type="number"] {
             width: 100%;
             font-size: 60px;
             border: 2%;
             border: 1px solid gray;
         }
-        input[type="file"]{
+
+        input[type="file"] {
             font-size: 40px;
             display: block;
             margin: auto;
             padding: 8px;
         }
 
-        select{
+        select {
             padding: 20px;
             font-size: 40px;
             display: block;
             margin: auto;
-            option{
+
+            option {
                 font-size: 15px;
                 text-align: center;
             }
         }
-        fieldset{
+
+        fieldset {
             border: none;
-            label{
+
+            label {
                 font-size: 50px;
             }
         }
-        .button{
+
+        .button {
             width: 100%;
         }
     }
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     background-color: $bg-blue;
     width: 100%;
     padding: 2% 0;
-    i{
-        color:white;
+
+    i {
+        color: white;
         margin: 0 4px;
     }
-    span{
+
+    span {
         font-size: 65px;
         color: white;
     }
 }
 
-.dashboard{
+.dashboard {
     background-image: $bg-rad;
     height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 
-    .logo{
+    .logo {
         flex-direction: column;
         align-items: center;
         color: white;
     }
-    .gravatar{
+
+    .gravatar {
         width: 200px;
         margin-top: 5%;
-        img{
+
+        img {
             border-radius: 50%;
         }
     }
 
-    .p-list{
+    .p-list {
         flex-direction: column;
     }
 
-    .home-l{
+    .home-l {
         margin: 40px auto;
         color: white;
         display: flex;
         justify-content: space-around;
-        a{
+
+        a {
             padding: 20px;
             color: white;
             text-decoration: none;
@@ -167,14 +188,15 @@ img{
 
 }
 
-.botton-b{
+.botton-b {
     position: absolute;
     width: 100%;
     bottom: 0%;
     padding: 30px 0px;
     display: flex;
     justify-content: center;
-    .button{
+
+    .button {
         color: white;
         padding: 40px;
         border: 2px solid white;
@@ -182,46 +204,50 @@ img{
     }
 }
 
-.total{
+.total {
     width: 100%;
     background-color: rgb(255, 255, 255);
     justify-content: space-between;
     padding: 30px 0px;
-    p{
+
+    p {
         margin: 0 20px;
         font-size: 50px;
         color: rgb(97, 96, 96);
     }
 }
 
-.row{
+.row {
     width: 95%;
     margin: 20px auto;
     height: 170px;
     align-items: center;
     background-color: white;
     line-height: 10px;
-    p{
+
+    p {
         font-size: larger;
         color: rgb(49, 49, 49);
     }
-    .thumb{
+
+    .thumb {
         width: 30%;
         padding: 10px;
     }
-    .text{
+
+    .text {
         padding: 10px;
         width: 70%;
     }
 }
 
-#flash{
+#flash {
     position: absolute;
     display: block;
     top: 8vh;
     right: 20px;
-    
-    #notice{
+
+    #notice {
         color: green;
         font-style: italic;
         padding: 3px;
@@ -230,7 +256,7 @@ img{
         border: 1px solid green;
     }
 
-    #danger{
+    #danger {
         color: red;
         font-style: italic;
         padding: 3px;
@@ -239,4 +265,3 @@ img{
         border: 1px solid red;
     }
 }
-
