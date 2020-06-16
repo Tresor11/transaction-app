@@ -12,8 +12,10 @@ class TransactionsController < ApplicationController
     @transaction = current_user.transactions.build(transaction_params)
     @transaction.author_id = current_user.id
     if @transaction.save
+      flash[:notice] = 'transaction saved'
       redirect_to transactions_path
     else
+      flash.now[:danger] = 'please fill in all the informations'
       render :new
     end
   end

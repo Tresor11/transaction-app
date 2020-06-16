@@ -7,9 +7,10 @@ class UsersController < ApplicationController
     @user = User.create(user_param)
     if @user.save
       log_in @user
-      flash[:success] = 'welcome'
+      flash[:notice] = "welcome#{@user.name}"
       redirect_to @user
     else
+      flash.now[:danger] = 'Invalid User name'
       render :new
     end
   end

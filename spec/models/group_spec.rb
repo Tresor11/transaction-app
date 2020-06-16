@@ -11,7 +11,7 @@ RSpec.describe Group, type: :model do
 
   it 'is valid with valid attributes' do
     group.creator_id = user.id
-    puts group.icon
+    expect(group.valid?).to be(true)
     expect(group.save).to be(true)
   end
 

@@ -16,8 +16,10 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
+      flash[:notice] = 'Group created'
       redirect_to @group
     else
+      flash.now[:danger] = 'please fill in all the informations'
       render :new
     end
   end
