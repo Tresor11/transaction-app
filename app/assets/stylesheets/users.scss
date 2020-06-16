@@ -246,20 +246,20 @@ img {
   right: 20px;
 
   #notice {
-    color: green;
+    color: white;
     font-style: italic;
     padding: 3px;
     border-radius: 5px;
     font-weight: bolder;
-    border: 1px solid green;
+    background-color: green;
   }
 
   #danger {
-    color: red;
+    color:white;
     font-style: italic;
-    padding: 3px;
+    padding: 5px;
     border-radius: 5px;
     font-weight: bolder;
-    border: 1px solid red;
+    background-color: red;
   }
 }
