@@ -21,7 +21,7 @@ class TransactionsController < ApplicationController
   end
 
   def external
-    @external = current_user.transactions.where(group: nil).order(created_at: :desc).preload(:group)
+    @external = current_user.transactions.where(group: nil).order(created_at: :desc)
     @sum = current_user.transactions.where(group: nil).sum('amount')
   end
 

@@ -33,7 +33,9 @@ img{
 }
 .container{
     width: 100%;
-
+    a{
+        text-decoration: none;
+    }
 }
 
 .bg-blue{
@@ -200,6 +202,11 @@ img{
     align-items: center;
     background-color: white;
     line-height: 10px;
+    p{
+        font-size: larger;
+        font-weight: bold;
+        color: rgb(97, 96, 96);
+    }
     .thumb{
         width: 30%;
         padding: 10px;
