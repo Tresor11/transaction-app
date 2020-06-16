@@ -1,267 +1,265 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$f-size:2.5rem;
-$bg-blue:rgb(55, 120, 194);
-;
-$bg-rad:linear-gradient(to top, #3084C2, #102F5D);
+$f-size: 2.5rem;
+$bg-blue: rgb(55, 120, 194);
+$bg-rad: linear-gradient(to top, #3084c2, #102f5d);
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .f-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .space-b {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .bg-green {
-    background-color: rgb(96, 181, 36)
+  background-color: rgb(96, 181, 36);
 }
 
 .flex-c {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 body {
-    background-color: rgb(233, 233, 233);
-    font-size: $f-size;
+  background-color: rgb(233, 233, 233);
+  font-size: $f-size;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .container {
-    width: 100%;
+  width: 100%;
 
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 }
 
 .bg-blue {
-    background: $bg-blue;
-    color: white;
+  background: $bg-blue;
+  color: white;
 }
 
 .button {
-    margin: 5px;
-    padding: 4% 0;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    font-size: $f-size;
+  margin: 5px;
+  padding: 4% 0;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: $f-size;
 }
 
 .login {
-    width: 80%;
-    margin: 30% auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 80%;
+  margin: 30% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    h1 {
-        margin-bottom: 20%;
-        text-align: center;
-    }
+  h1 {
+    margin-bottom: 20%;
+    text-align: center;
+  }
 
-    .button {
-        width: 100%;
-    }
+  .button {
+    width: 100%;
+  }
 }
 
 .form-container {
-    width: 90%;
-    margin: 30% auto;
-    text-align: center;
+  width: 90%;
+  margin: 30% auto;
+  text-align: center;
 
-    form {
-        label {
-            padding: 8px;
-        }
-
-        input[type="text"],
-        input[type="number"] {
-            width: 100%;
-            font-size: 60px;
-            border: 2%;
-            border: 1px solid gray;
-        }
-
-        input[type="file"] {
-            font-size: 40px;
-            display: block;
-            margin: auto;
-            padding: 8px;
-        }
-
-        select {
-            padding: 20px;
-            font-size: 40px;
-            display: block;
-            margin: auto;
-
-            option {
-                font-size: 15px;
-                text-align: center;
-            }
-        }
-
-        fieldset {
-            border: none;
-
-            label {
-                font-size: 50px;
-            }
-        }
-
-        .button {
-            width: 100%;
-        }
+  form {
+    label {
+      padding: 8px;
     }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      font-size: 60px;
+      border: 2%;
+      border: 1px solid gray;
+    }
+
+    input[type="file"] {
+      font-size: 40px;
+      display: block;
+      margin: auto;
+      padding: 8px;
+    }
+
+    select {
+      padding: 20px;
+      font-size: 40px;
+      display: block;
+      margin: auto;
+
+      option {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+
+    fieldset {
+      border: none;
+
+      label {
+        font-size: 50px;
+      }
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    background-color: $bg-blue;
-    width: 100%;
-    padding: 2% 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: $bg-blue;
+  width: 100%;
+  padding: 2% 0;
 
-    i {
-        color: white;
-        margin: 0 4px;
-    }
+  i {
+    color: white;
+    margin: 0 4px;
+  }
 
-    span {
-        font-size: 65px;
-        color: white;
-    }
+  span {
+    font-size: 65px;
+    color: white;
+  }
 }
 
 .dashboard {
-    background-image: $bg-rad;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
+  background-image: $bg-rad;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
     flex-direction: column;
+    align-items: center;
+    color: white;
+  }
 
-    .logo {
-        flex-direction: column;
-        align-items: center;
-        color: white;
+  .gravatar {
+    width: 200px;
+    margin-top: 5%;
+
+    img {
+      border-radius: 50%;
     }
+  }
 
-    .gravatar {
-        width: 200px;
-        margin-top: 5%;
+  .p-list {
+    flex-direction: column;
+  }
 
-        img {
-            border-radius: 50%;
-        }
+  .home-l {
+    margin: 40px auto;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      padding: 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 60px;
+      border-bottom: 1px solid white;
     }
-
-    .p-list {
-        flex-direction: column;
-    }
-
-    .home-l {
-        margin: 40px auto;
-        color: white;
-        display: flex;
-        justify-content: space-around;
-
-        a {
-            padding: 20px;
-            color: white;
-            text-decoration: none;
-            font-size: 60px;
-            border-bottom: 1px solid white;
-        }
-    }
-
+  }
 }
 
 .botton-b {
-    position: absolute;
-    width: 100%;
-    bottom: 0%;
-    padding: 30px 0px;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
 
-    .button {
-        color: white;
-        padding: 40px;
-        border: 2px solid white;
-        border-radius: 20px;
-    }
+  .button {
+    color: white;
+    padding: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
 }
 
 .total {
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    justify-content: space-between;
-    padding: 30px 0px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  padding: 30px 0px;
 
-    p {
-        margin: 0 20px;
-        font-size: 50px;
-        color: rgb(97, 96, 96);
-    }
+  p {
+    margin: 0 20px;
+    font-size: 50px;
+    color: rgb(97, 96, 96);
+  }
 }
 
 .row {
-    width: 95%;
-    margin: 20px auto;
-    height: 170px;
-    align-items: center;
-    background-color: white;
-    line-height: 10px;
+  width: 95%;
+  margin: 20px auto;
+  height: 170px;
+  align-items: center;
+  background-color: white;
+  line-height: 10px;
 
-    p {
-        font-size: larger;
-        color: rgb(49, 49, 49);
-    }
+  p {
+    font-size: larger;
+    color: rgb(49, 49, 49);
+  }
 
-    .thumb {
-        width: 30%;
-        padding: 10px;
-    }
+  .thumb {
+    width: 30%;
+    padding: 10px;
+  }
 
-    .text {
-        padding: 10px;
-        width: 70%;
-    }
+  .text {
+    padding: 10px;
+    width: 70%;
+  }
 }
 
 #flash {
-    position: absolute;
-    display: block;
-    top: 8vh;
-    right: 20px;
+  position: absolute;
+  display: block;
+  top: 8vh;
+  right: 20px;
 
-    #notice {
-        color: green;
-        font-style: italic;
-        padding: 3px;
-        border-radius: 5px;
-        font-weight: bolder;
-        border: 1px solid green;
-    }
+  #notice {
+    color: green;
+    font-style: italic;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: bolder;
+    border: 1px solid green;
+  }
 
-    #danger {
-        color: red;
-        font-style: italic;
-        padding: 3px;
-        border-radius: 5px;
-        font-weight: bolder;
-        border: 1px solid red;
-    }
+  #danger {
+    color: red;
+    font-style: italic;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: bolder;
+    border: 1px solid red;
+  }
 }
