@@ -11,7 +11,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @transactions=@group.transactions.includes(:author)
+    @transactions = @group.transactions.includes(:author)
     @sum = @group.transactions.sum('amount')
   end
 
