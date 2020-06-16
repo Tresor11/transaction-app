@@ -57,6 +57,22 @@ img {
   font-size: $f-size;
 }
 
+.botton-b {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+
+  .button {
+    color: white;
+    padding: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+}
+
 .login {
   width: 80%;
   margin: 30% auto;
@@ -186,27 +202,11 @@ img {
   }
 }
 
-.botton-b {
-  position: absolute;
-  width: 100%;
-  bottom: 0%;
-  padding: 30px 0px;
-  display: flex;
-  justify-content: center;
-
-  .button {
-    color: white;
-    padding: 40px;
-    border: 2px solid white;
-    border-radius: 20px;
-  }
-}
-
 .total {
   width: 100%;
   background-color: rgb(255, 255, 255);
   justify-content: space-between;
-  padding: 30px 0px;
+  padding: 30px 0;
 
   p {
     margin: 0 20px;
