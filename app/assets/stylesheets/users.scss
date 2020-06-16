@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $f-size:2.5rem;
-$bg-blue:rgb(37, 37, 252);
+$bg-blue:rgb(55, 120, 194);;
 $bg-rad:linear-gradient(to top, #3084C2, #102F5D);
 
 .d-flex{
@@ -16,7 +16,7 @@ $bg-rad:linear-gradient(to top, #3084C2, #102F5D);
 }
 
 .bg-green{
-    background-color: rgb(52, 245, 52);
+    background-color: rgb(96, 181, 36)
 }
 
 .flex-c{
@@ -204,8 +204,7 @@ img{
     line-height: 10px;
     p{
         font-size: larger;
-        font-weight: bold;
-        color: rgb(97, 96, 96);
+        color: rgb(49, 49, 49);
     }
     .thumb{
         width: 30%;
