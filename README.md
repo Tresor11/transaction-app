@@ -2,7 +2,7 @@
 
 > This project is a transaction managment app built with ruby on rails.
 
-![screenshot](./bookstore.png)
+![screenshot](./t-app.png)
 
 This application is made of three models
 - user model
