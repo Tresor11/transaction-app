@@ -1,24 +1,79 @@
-# README
+# Transaction app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This project is a transaction managment app built with ruby on rails.
 
-Things you may want to cover:
+![screenshot](./t-app.png)
+![screenshot](./t-t-app.png)
 
-* Ruby version
+This application is made of three models
+- user model
+- transaction model
+- group model
 
-* System dependencies
+a user can create many transaction and many groups , while creating a transaction they can choose to assign it to specific group or not.
+when a user visit a group index page they can see all the transactions withing that group created by other users
 
-* Configuration
+## Built With
 
-* Database creation
+- Rails
+- Sass
+- javaScript
+- Ruby 
+- Heroku
 
-* Database initialization
+## Live Demo
 
-* How to run the test suite
+[Live Demo Link](https://arcane-hamlet-71659.herokuapp.com/)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Getting Started
 
-* Deployment instructions
+Here are the steps to follow in order to get this project on your local computer.
 
-* ...
+### Prerequisites
+
+`rails v6.0.3 +`
+
+`ruby v2.7.1 +`
+
+### Setup
+
+clone this repo by typing `git clone`
+
+### Install
+
+install the dependacies by typing `bundle install`
+
+### Usage
+
+start the local server by running `rails s`
+
+### Deployment
+
+this project is deployed on heroku
+
+## Authors
+
+👤 **Tresor bireke**
+
+- Github: [@Tresor11](https://github.com/Tresor11)
+- Twitter: [@Tbireke](https://twitter.com/Tbireke)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Design idea by Gregoire Vella on Behance
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
+
