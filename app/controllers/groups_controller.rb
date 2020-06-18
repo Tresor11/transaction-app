@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class GroupsController < ApplicationController
   def index
     @groups = Group.all.order(created_at: :desc)
@@ -11,15 +9,17 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @transactions=@group.transactions.includes(:author)
+    @transactions = @group.transactions.includes(:author)
     @sum = @group.transactions.sum('amount')
   end
 
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
+      flash[:notice] = 'Group created'
       redirect_to @group
     else
+      flash.now[:danger] = 'please fill in all the informations'
       render :new
     end
   end

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Group < ApplicationRecord
   belongs_to :creator, class_name: 'User'
   has_many :transactions, dependent: :destroy

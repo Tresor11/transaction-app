@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class SessionsController < ApplicationController
   def index
     redirect_to user_path(current_user) if logged_in?
@@ -11,10 +9,10 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name].downcase)
     if user
       log_in user
+      flash[:notice] = "welcome #{user.name}"
       redirect_to user_path(user)
     else
-      byebug
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = 'Invalid User name'
       render 'new'
     end
   end
