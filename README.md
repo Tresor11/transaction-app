@@ -1,6 +1,6 @@
 # Transaction app
 
-> This project is a transaction managment app built with ruby on rails.
+> This project is a transaction managment app built with Ruby on Rails.
 
 ![screenshot](./t-app.png)
 
