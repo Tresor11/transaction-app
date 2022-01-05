@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :transactions
 
   get '/external',   to: 'transactions#external'
+  root to: 'users#welcome'
 end

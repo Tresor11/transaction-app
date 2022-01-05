@@ -1,0 +1,31 @@
+// import mixin file in this file
+@import "mixins";
+
+.container {
+  width: 90%;
+  height: 95vh;
+  margin: 5% auto;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+  // background: rgb(177, 177, 177);
+  border-radius: 10px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.button{
+  @include center;
+  height: 2rem;
+  width: 4rem;
+  font-size: large;
+  background-color: white;
+  border-radius: 5px;
+}
+
+// h1 {
+//   font-size: 2.6rem;
+//   margin: none;
+// }

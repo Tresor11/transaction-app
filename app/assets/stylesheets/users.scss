@@ -4,58 +4,27 @@
 $f-size: 2.5rem;
 $bg-blue: rgb(55, 120, 194);
 $bg-rad: linear-gradient(to top, #3084c2, #102f5d);
+@import "mixins";
 
-.d-flex {
-  display: flex;
-}
+.home-page{
+  height: 100%;
+  background-image: image-url('wave-haikei.svg');
+  padding: 10px;
 
-.f-bold {
-  font-weight: bold;
-}
+  .home-widget {
+    @include widget(rgb(255, 255, 255));
+    // align all content in the widget to the bottom
+  }
 
-.space-b {
-  justify-content: space-between;
-}
-
-.bg-green {
-  background-color: rgb(96, 181, 36);
-}
-
-.flex-c {
-  flex-direction: column;
-}
-
-body {
-  background-color: rgb(233, 233, 233);
-  font-size: $f-size;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.container {
-  width: 100%;
-
-  a {
-    text-decoration: none;
+  .button-container{
+    margin-top: 5%;
+  }
+  .button{
+    margin-top: 10px;
+    width: 100%;
   }
 }
 
-.bg-blue {
-  background: $bg-blue;
-  color: white;
-}
-
-.button {
-  margin: 5px;
-  padding: 4% 0;
-  text-decoration: none;
-  text-align: center;
-  font-weight: bold;
-  font-size: $f-size;
-}
 
 .botton-b {
   position: absolute;
