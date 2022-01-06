@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Creating a city', type: :feature do
+RSpec.describe 'Creating a user', type: :feature do
   scenario 'valid inputs' do
     visit new_user_path
     find('#name', visible: false).set 'tresor'
