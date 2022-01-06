@@ -18,6 +18,6 @@
   </div>
   </div>
   <div class="botton-b">
-  <%= link_to 'LOGOUT', logout_path,method: :delete,class:'button' %>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
   </div>
-  </div>
+</div>

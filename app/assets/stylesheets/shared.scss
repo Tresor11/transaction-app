@@ -27,14 +27,36 @@
 
 }
 
+.form-container{
+  background-color: white;
+  padding: 20px 0px;
+  border-radius: 10px;
+  margin: 20% auto;
+  form{
+    font-weight: bold;
+    input{
+      font-weight: bolder;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .button{
+      color: $blue-text;
+    }
+  }
+  a{
+    color: $blue-text;
+    font-weight: bold;
+  }
+}
+
 .button{
-  @include center;
-  height: 2rem;
-  width: 4rem;
-  font-size: large;
+  font-size: medium;
   background-color: white;
   border-radius: 5px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .red-text {

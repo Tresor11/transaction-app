@@ -24,8 +24,10 @@ $bg-rad: linear-gradient(to top, #3084c2, #102f5d);
     margin-top: 5%;
   }
   .button{
+    @include center;
     margin-top: 10px;
     width: 100%;
+    padding: 10px 0px;
   }
 }
 
@@ -37,13 +39,6 @@ $bg-rad: linear-gradient(to top, #3084c2, #102f5d);
   padding: 30px 0;
   display: flex;
   justify-content: center;
-
-  .button {
-    color: white;
-    padding: 40px;
-    border: 2px solid white;
-    border-radius: 20px;
-  }
 }
 
 .login {
@@ -58,62 +53,47 @@ $bg-rad: linear-gradient(to top, #3084c2, #102f5d);
     margin-bottom: 20%;
     text-align: center;
   }
-
-  .button {
-    width: 100%;
-  }
 }
 
-.form-container {
-  width: 90%;
-  margin: 30% auto;
-  text-align: center;
+// .form-container {
+//   width: 90%;
+//   margin: 30% auto;
+//   text-align: center;
 
-  form {
-    label {
-      padding: 8px;
-    }
+//   form {
+//     label {
+//       padding: 8px;
+//     }
 
-    input[type="text"],
-    input[type="number"] {
-      width: 100%;
-      font-size: 60px;
-      border: 2%;
-      border: 1px solid gray;
-    }
+//     input[type="file"] {
+//       font-size: 40px;
+//       display: block;
+//       margin: auto;
+//       padding: 8px;
+//     }
 
-    input[type="file"] {
-      font-size: 40px;
-      display: block;
-      margin: auto;
-      padding: 8px;
-    }
+//     select {
+//       padding: 20px;
+//       font-size: 40px;
+//       display: block;
+//       margin: auto;
 
-    select {
-      padding: 20px;
-      font-size: 40px;
-      display: block;
-      margin: auto;
+//       option {
+//         font-size: 15px;
+//         text-align: center;
+//       }
+//     }
 
-      option {
-        font-size: 15px;
-        text-align: center;
-      }
-    }
+//     fieldset {
+//       border: none;
 
-    fieldset {
-      border: none;
+//       label {
+//         font-size: 50px;
+//       }
+//     }
 
-      label {
-        font-size: 50px;
-      }
-    }
-
-    .button {
-      width: 100%;
-    }
-  }
-}
+//   }
+// }
 
 .header {
   display: flex;
