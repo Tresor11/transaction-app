@@ -1,13 +1,19 @@
 // import mixin file in this file
 @import "mixins";
 
+body{
+  max-width: 720px;
+  margin: auto;
+}
+
 .container {
   width: 95%;
   height: 95vh;
-  margin: 5% auto;
+  margin: auto auto;
   box-sizing: border-box;
   text-align: center;
   padding: 10px;
+  overflow-y: scroll;
   // background: rgb(177, 177, 177);
   border-radius: 10px;
 
@@ -75,7 +81,24 @@
   color: white;
 }
 
+.shadow{
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1), 0px 4px 6px -4px rgba(0,0,0,0.1);
+  // box-shadow: black 0px 0px 10px;
+  // box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
 // h1 {
 //   font-size: 2.6rem;
 //   margin: none;
 // }
+
+.create-button{
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  background: white;
+  font-weight: bolder;
+  color: $blue-text !important;
+  border-radius: 10px;
+  padding: 20px;
+}
