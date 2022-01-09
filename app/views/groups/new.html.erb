@@ -1,18 +1,27 @@
-<%= render 'shared/header', text:"NEW GROUP", path:groups_path %>
 <div class="container">
-<div class="form-container">
-<h1>NEW GROUP</h1>
-<%= form_with(model:@group,scope:"group",local:true)do |f| %>
-<fieldset>
-<%= f.label :name, 'Name' %>
-  <%= f.text_field :name,id:"name" %>
-</fieldset>
-  <fieldset>
-  <%= f.label :icon, 'icon' %>
-  <%= f.hidden_field :icon_cache %>
-  <%= f.file_field :icon,id:"icon"%>
-</fieldset>
-  <%= f.submit "Create",class:'button bg-blue' %>
-<% end %>
-</div>
+  <div class="form-page">
+  <%= render 'shared/header', text:"NEW GROUP", path:groups_path %>
+    <div class="form-container">
+      <h2>New Group</h2>
+
+      <%= form_with(model:@group,scope:"group",local:true)do |f| %>
+
+        <div class="field">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autocomplete: "name" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :icon, 'icon' %>
+          <%= f.hidden_field :icon_cache %>
+          <%= f.file_field :icon,id:"icon"%>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Create Group" , class: "button"%>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
 </div>

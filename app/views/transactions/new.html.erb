@@ -1,25 +1,32 @@
-<%= render 'shared/header', text:"LOGIN", path:transactions_path %>
 <div class="container">
-<div class="form-container">
-<h2>New transaction</h2>
-<%= form_with(model:@transaction,scope:"transaction",local:true)do |f| %>
-<fieldset>
-<%= f.label :name, 'Name' %>
-  <%= f.text_field :name ,id:"name" %>
-</fieldset>
+  <div class="form-page">
+  <%= render 'shared/header', text:"NEW TRANSACTION", path:groups_path %>
+    <div class="form-container">
+      <h2>New Transaction</h2>
 
-  <fieldset>
-  <%= f.label :amount, 'Amount' %>
-  <%= f.number_field :amount,id:"amount" %>
-</fieldset>
+      <%= form_with(model:@transaction,scope:"transaction",local:true)do |f| %>
 
-<fieldset>
-        <%= f.label :group_id, "Group",class:"form-label"%>
-        <%= f.select :group_id, [["select Group",nil]]+Group.all.collect {|x| [x.name, x.id]}, {}, class: "multiple" %>
-</fieldset>
+        <div class="field">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autocomplete: "name" , required: true %>
+        </div>
 
-  <%= f.submit "Register",class:'button bg-blue' %>
-<% end %>
-</div>
+        <div class="field">
+          <%= f.label :amount %><br />
+          <%= f.number_field :amount, autocomplete: "amount" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :group_id, "Group",class:"form-label"%>
+          <%= f.select :group_id, [["select Group",nil]]+Group.pluck(:name,:id), {}, class: "multiple" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Create Transaction" , class: "button"%>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
 </div>
 

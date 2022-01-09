@@ -102,3 +102,21 @@ body{
   border-radius: 10px;
   padding: 20px;
 }
+
+.button-widget{
+  margin-top: 5px;
+  display: flex;
+  .button{
+    font-weight: normal;
+    @include center;
+    padding: 10px;
+    margin-right: 5px;
+    // select first child
+    &:first-child {
+      color: $blue-text;
+    }
+    &:last-child {
+      color: $red-500;
+    }
+  }
+}

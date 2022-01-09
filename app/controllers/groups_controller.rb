@@ -19,7 +19,7 @@ class GroupsController < ApplicationController
       flash[:notice] = 'Group created'
       redirect_to @group
     else
-      flash.now[:danger] = 'please fill in all the informations'
+      flash.now[:danger] = 'please fill in all the required fields'
       render :new
     end
   end
