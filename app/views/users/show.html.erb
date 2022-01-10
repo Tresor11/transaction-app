@@ -26,13 +26,13 @@
         </div>
 
         <div class="home-nav-link shadow">
-          <%= link_to groups_path do %>
+          <%= link_to external_path do %>
             <i class="fa fa-layer-group  fa-2x text-light" aria-hidden="true"></i> <span> External Transactions</span>
           <%end%>
         </div>
 
         <div class="logout">
-          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "logout-btn" %>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "button" %>
         </div>
 
       </div>
