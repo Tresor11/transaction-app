@@ -1,6 +1,7 @@
 class TransactionsController < ApplicationController
   def index
-    @transactions = current_user.transactions.includes(:group, :author).where.not(group_id: [nil]).order(created_at: :desc)
+    @transactions = current_user.transactions.includes(:group, :author)
+      .where.not(group_id: [nil]).order(created_at: :desc)
     @sum = @transactions.sum('amount')
   end
 

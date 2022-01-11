@@ -3,10 +3,6 @@ require 'rails_helper'
 RSpec.describe 'Creating a Group', type: :feature do
   scenario 'valid inputs' do
     visit new_user_registration_path
-    # find('#user_name', visible: false).set 'tresor'
-    # find('#user_email', visible: false).set 't@gmail.com'
-    # find('#user_password', visible: false).set '123456'
-    # find('#user_password_confirmation', visible: false).set '123456'
     fill_in 'Name', with: 'tresor'
     fill_in 'Email', with: 't@gmail.com'
     fill_in 'Password', with: '123456'
