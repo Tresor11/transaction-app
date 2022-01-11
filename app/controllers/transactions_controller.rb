@@ -8,6 +8,10 @@ class TransactionsController < ApplicationController
     @transaction = current_user.transactions.build
   end
 
+  def edit
+    @transaction = current_user.transactions.find(params[:id])
+  end
+
   def create
     @transaction = current_user.transactions.build(transaction_params)
     @transaction.author_id = current_user.id
@@ -20,13 +24,31 @@ class TransactionsController < ApplicationController
     end
   end
 
+  def update
+    @transaction = current_user.transactions.find(params[:id])
+    if @transaction.update(transaction_params)
+      flash[:notice] = 'Transaction updated'
+      redirect_to transactions_path
+    else
+      flash.now[:danger] = 'please fill in all the required fields'
+      render :edit
+    end
+  end
+
   def external
-    @external = current_user.transactions.where(group: nil).order(created_at: :desc)
-    @sum = @external.sum('amount')
+    @externals = current_user.transactions.where(group: nil).order(created_at: :desc)
+    @sum = @externals.sum('amount')
   end
 
   def show
-    @transaction = Purchase.find(params[:id])
+    @transaction = Transaction.find(params[:id])
+  end
+
+  def destroy
+    @transaction = current_user.transactions.find(params[:id])
+    @transaction.destroy
+    # redirect_to the last page
+    redirect_to request.referrer
   end
 
   private

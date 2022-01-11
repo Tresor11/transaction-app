@@ -37,6 +37,10 @@ $bg-rad: linear-gradient(to top, #3084c2, #102f5d);
   height: 100%;
   background: $dark-blue-bg;
   padding: 10px;
+  .logout .button{
+    padding: 10px;
+    font-weight: normal;
+  }
 
   .user-info-widget {
     background: white;
@@ -61,10 +65,9 @@ $bg-rad: linear-gradient(to top, #3084c2, #102f5d);
       }
 
       .button {
-        padding: 5px;
-        border: 1px solid #ccc;
+        padding: 10px 0px;
         font-weight: normal;
-        // background-color: $blue-200;
+        color: $blue-text;
       }
     }
   }
@@ -242,24 +245,25 @@ $bg-rad: linear-gradient(to top, #3084c2, #102f5d);
 #flash {
   position: absolute;
   display: block;
-  top: 8vh;
+  top: 5px;
   right: 20px;
+  // hide flash message after 3 seconds
 
   #notice {
     color: white;
     font-style: italic;
-    padding: 3px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 10px;
     font-weight: bolder;
-    background-color: green;
+    background-color: $green-500;
   }
 
   #danger {
     color: white;
     font-style: italic;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 10px;
     font-weight: bolder;
-    background-color: red;
+    background-color: $red-500;
   }
 }

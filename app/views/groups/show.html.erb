@@ -1,7 +1,16 @@
 <div class="container">
   <%= render 'shared/header', text:@group.name, path:groups_path %>
   <div class="groups-page">
+    <div class="summary-widget">
+      <p><%= @group.name %></p>
+      <hr/>
+      <p>Total Transactions:  <span> <%=@group.transactions.count%></span></p>
+      <p>Total Amount:  <span> <%=@sum%>$</span> </p>
+      <div class="button-widget">
+        <%= link_to 'Edit', edit_group_path(@group), class: "button shadow blue-text" %>
+      </div>
+    </div>
     <%= render partial: 'shared/transaction' , collection: @transactions , as: :transaction%>
-    <%= link_to 'New Group', new_transaction_path , class: "create-button" %>
+    <%= link_to 'New Transaction', new_transaction_path , class: "create-button shadow" %>
   </div>
 </div>

@@ -1,8 +1,13 @@
 <div class="container">
   <%= render 'shared/header', text:"TRANSACTIONS", path:groups_path %>
   <div class="groups-page">
-    <p>Total Amount</p>
-    <%= render partial: 'shared/transaction' , collection: @external , as: :transaction %>
-    <%= link_to 'New Transaction', new_transaction_path , class: "create-button" %>
+    <div class="summary-widget">
+      <p>My External Transactions</p>
+      <hr/>
+      <p>Total Transactions:  <span> <%=@externals.count%></span></p>
+      <p>Total Amount:  <span> <%=@sum%>$</span> </p>
+    </div>
+    <%= render partial: 'shared/transaction' , collection: @externals , as: :transaction %>
+    <%= link_to 'New Transaction', new_transaction_path , class: "create-button shadow" %>
   </div>
 </div>
