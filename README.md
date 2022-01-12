@@ -15,7 +15,7 @@ when a user visit a group index page they can see all the transactions withing t
 - Rails
 - Sass
 - javaScript
-- Ruby 
+- Ruby
 - Heroku
 
 ## Live Demo
