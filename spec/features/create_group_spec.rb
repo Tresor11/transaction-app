@@ -2,31 +2,22 @@ require 'rails_helper'
 
 RSpec.describe 'Creating a Group', type: :feature do
   scenario 'valid inputs' do
-    visit new_user_registration_path
-    fill_in 'Name', with: 'tresor'
-    fill_in 'Email', with: 't@gmail.com'
-    fill_in 'Password', with: '123456'
-    fill_in 'Password confirmation', with: '123456'
-    click_on 'Sign up'
-    expect(page).to have_content('tresor')
-    click_on 'groups'
-    expect(page).to have_content('GROUPS')
-    click_on 'NEW GROUP'
-    find('#name', visible: false).set 'new group'
+    sign_in(create(:user))
+    expect(page).to have_content('Groups')
+    click_on 'Groups'
+    click_on 'New Group'
+    fill_in 'Name', with: 'test_group'
     find('#icon', visible: false).set Rails.root.join('spec/support/kid.jpg')
     click_on 'Create'
-    expect(page).to have_content('new group')
+    expect(page).to have_content('test_group')
   end
 
   scenario 'invalid inputs' do
-    visit new_user_registration_path
-    fill_in 'Name', with: 'tresor'
-    fill_in 'Email', with: 't@gmail.com'
-    fill_in 'Password', with: '123456'
-    fill_in 'Password confirmation', with: '123456'
-    click_on 'Sign up'
-    visit new_group_path
+    sign_in(create(:user))
+    expect(page).to have_content('Groups')
+    click_on 'Groups'
+    click_on 'New Group'
     click_on 'Create'
-    expect(page).to have_content('please fill in all the informations')
+    expect(page).to have_content('please fill in all the required fields')
   end
 end

@@ -1,7 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 
-#require everything in the support folder
+# require everything in the support folder
 require 'support/features/sign_in'
 
 ENV['RAILS_ENV'] ||= 'test'
