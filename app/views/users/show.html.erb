@@ -1,23 +1,41 @@
-<% provide(:title, @user.name) %>
-<div class="container dashboard">
-  <div class="logo d-flex">
-  <div class="gravatar">
-  <%= gravatar_for @user %>
+<div class="container ">
+  <div class="user-profile">
+
+      <div class="user-info-widget">
+        <div class="gravatar">
+          <%= gravatar_for current_user %>
+        </div>
+        <div class="user-info">
+          <p><%= current_user.name %></p>
+          <p><%= current_user.email %></p>
+          <%= link_to 'Edit Profile', edit_user_registration_path , class: "button shadow" %>
+        </div>
+      </div>
+
+      <div class="user-navigation-widget">
+        <div class="home-nav-link shadow">
+          <%= link_to groups_path do %>
+            <i class="fas fa-boxes  fa-2x text-light" aria-hidden="true"></i> <span> Groups</span>
+          <%end%>
+        </div>
+
+        <div class="home-nav-link shadow">
+          <%= link_to transactions_path do %>
+            <i class="fa fa-layer-group  fa-2x text-light" aria-hidden="true"></i> <span> My Transactions</span>
+          <%end%>
+        </div>
+
+        <div class="home-nav-link shadow">
+          <%= link_to external_path do %>
+            <i class="fa fa-layer-group  fa-2x text-light" aria-hidden="true"></i> <span> External Transactions</span>
+          <%end%>
+        </div>
+
+        <div class="logout">
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "button shadow red-text" %>
+        </div>
+
+      </div>
+
   </div>
-  <h1 class=""><%= @user.name%></h1>
-  </div>
-  <div class="p-list d-flex">
-  <div class="home-l">
-  <i class="fa fa-object-group  fa-2x text-light" aria-hidden="true"></i> <%= link_to  "groups", groups_path ,class:"border-bottom text-light"%>
-  </div>
-   <div class="home-l">
-    <i class="fa fa-layer-group  fa-2x text-light" aria-hidden="true"></i> <%= link_to  "my transactions", transactions_path,class:"border-bottom text-light" %>
-  </div>
-   <div class="home-l">
-  <i class="fa fa-address-card fa-2x text-light" aria-hidden="true"></i><%= link_to  "external transactions", external_path ,class:"text-light border-bottom "%>
-  </div>
-  </div>
-  <div class="botton-b">
-  <%= link_to 'LOGOUT', logout_path,method: :delete,class:'button' %>
-  </div>
-  </div>
+</div>

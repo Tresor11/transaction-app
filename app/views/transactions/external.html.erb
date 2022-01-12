@@ -1,18 +1,13 @@
-<%= render 'shared/header', text:"EXTERNALS", path:root_path %>
 <div class="container">
-<div class="total d-flex">
-<p>Total Amount</p>
-<p class="f-bold"><%=@sum%>$</p>
-</div>
-<% @external.each do |t|%>
-<div class="row d-flex">
-<div class="text d-flex flex-c">
-<span class="d-flex space-b"><p><%=t.name%></p><p><%=t.amount%> $</p></span>
-<span><p class=""><%= t.created_at.strftime("%m/%d/%Y")%></p></span>
-</div>
-</div>
-<%end%>
-  <div class="botton-b bg-green">
-  <%= link_to 'NEW TRANSACTION', new_transaction_path,class:'button' %>
+  <%= render 'shared/header', text:"TRANSACTIONS", path:groups_path %>
+  <div class="groups-page">
+    <div class="summary-widget">
+      <p>My External Transactions</p>
+      <hr/>
+      <p>Total Transactions:  <span> <%=@externals.count%></span></p>
+      <p>Total Amount:  <span> <%=@sum%>$</span> </p>
+    </div>
+    <%= render partial: 'shared/transaction' , collection: @externals , as: :transaction %>
+    <%= link_to 'New Transaction', new_transaction_path , class: "create-button shadow" %>
   </div>
 </div>

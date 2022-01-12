@@ -1,0 +1,14 @@
+<%= form_with(model:@group,scope:"group",local:true)do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "name" %>
+  </div>
+  <div class="field">
+    <%= f.label :icon, 'icon' %>
+    <%= f.hidden_field :icon_cache %>
+    <%= f.file_field :icon,id:"icon"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create Group" , class: "button"%>
+  </div>
+<% end %>

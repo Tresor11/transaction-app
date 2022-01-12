@@ -1,0 +1,17 @@
+<%= form_with(model:@transaction,scope:"transaction",local:true)do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "name" , required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.number_field :amount, autocomplete: "amount" %>
+  </div>
+  <div class="field">
+    <%= f.label :group_id, "Group",class:"form-label"%>
+    <%= f.select :group_id, [["select Group",nil]]+Group.pluck(:name,:id), {}, class: "multiple" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" , class: "button"%>
+  </div>
+<% end %>

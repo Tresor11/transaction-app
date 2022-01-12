@@ -1,20 +1,20 @@
-<%= render 'shared/header', text:"GROUPS", path:root_path %>
 <div class="container">
-<%@groups.each do |group|%>
-<%=link_to group do %>
-<div class="row d-flex">
-<div class="thumb">
-<img src="<%= group.icon %>">
-</div>
-<div class="text d-flex flex-c">
-<span class="d-flex space-b"><p><%=group.name%></p></span>
-<span><p class=""><%= group.created_at.strftime("%m/%d/%Y")%></p></span>
-</div>
-</div>
-<%end%>
-<%end%>
-  <div class="botton-b bg-green">
-  <%= link_to 'NEW GROUP', new_group_path,class:'button' %>
+  <%= render 'shared/header', text:"GROUPS", path:root_path %>
+  <div class="groups-page">
+    <%@groups.each do |group|%>
+      <div class="group-nav-link">
+        <%=link_to group do %>
+          <div class="group-image thumb">
+            <img src="<%= group.icon %>">
+          </div>
+          <div class="group-info">
+            <span class="group name"><%=group.name%></span><br/>
+            <span>Create on: <%= group.created_at.strftime("%m/%d/%Y")%></span>
+          </div>
+        <%end%>
+      </div>
+    <%end%>
+    <%= link_to 'New Group', new_group_path , class: "create-button shadow" %>
   </div>
 </div>
 

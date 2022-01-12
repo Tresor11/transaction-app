@@ -1,21 +1,16 @@
-<%= render 'shared/header', text:@group.name, path:groups_path %>
 <div class="container">
-<div class="total d-flex">
-<p>Total Amount</p>
-<p class="f-bold"><%=@sum%>$</p>
-</div>
-<%@transactions.each do |t|%>
-<div class="row d-flex">
-<div class="thumb">
-<img src="<%= @group.icon %>">
-</div>
-<div class="text d-flex flex-c">
-<span class="d-flex space-b"><p><%=t.name%></p><p><%=t.amount%> $</p></span>
-<span class="d-flex space-b"><p>Author: <%=t.author.name%></p><p><%= t.created_at.strftime("%m/%d/%Y")%></p></span>
-</div>
-</div>
-<%end%>
-  <div class="botton-b bg-green">
-  <%= link_to 'NEW TRANSACTION', new_transaction_path,class:'button' %>
+  <%= render 'shared/header', text:@group.name, path:groups_path %>
+  <div class="groups-page">
+    <div class="summary-widget">
+      <p><%= @group.name %></p>
+      <hr/>
+      <p>Total Transactions:  <span> <%=@group.transactions.count%></span></p>
+      <p>Total Amount:  <span> <%=@sum%>$</span> </p>
+      <div class="button-widget">
+        <%= link_to 'Edit', edit_group_path(@group), class: "button shadow blue-text" %>
+      </div>
+    </div>
+    <%= render partial: 'shared/transaction' , collection: @transactions , as: :transaction%>
+    <%= link_to 'New Transaction', new_transaction_path , class: "create-button shadow" %>
   </div>
 </div>

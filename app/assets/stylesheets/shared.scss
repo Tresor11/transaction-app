@@ -1,0 +1,122 @@
+// import mixin file in this file
+@import "mixins";
+
+body{
+  max-width: 720px;
+  margin: auto;
+}
+
+.container {
+  width: 95%;
+  height: 95vh;
+  margin: auto auto;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+  overflow-y: scroll;
+  // background: rgb(177, 177, 177);
+  border-radius: 10px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.form-page{
+  height: 100%;
+  background-image: image-url('wave-haikei.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.form-container{
+  background-color: white;
+  padding: 20px 0px;
+  border-radius: 10px;
+  margin: 20% auto;
+  form{
+    font-weight: bold;
+    input{
+      font-weight: bolder;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .button{
+      color: $blue-text;
+    }
+  }
+  a{
+    color: $blue-text;
+    font-weight: bold;
+  }
+}
+
+.button{
+  font-size: medium;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.red-text {
+  color: $red-500 !important;
+}
+
+.blue-text {
+  color: $blue-text !important;
+}
+
+.bg-blue{
+  background-color: $blue-text;
+}
+
+.white-text {
+  color: white;
+}
+
+.shadow{
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1), 0px 4px 6px -4px rgba(0,0,0,0.1);
+  // box-shadow: black 0px 0px 10px;
+  // box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.create-button{
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  background: white;
+  font-weight: bolder;
+  color: $blue-text !important;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.button-widget{
+  margin-top: 5px;
+  display: flex;
+  .button{
+    font-weight: normal;
+    @include center;
+    padding: 10px;
+    margin-right: 5px;
+  }
+}
+
+.summary-widget{
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  span{
+    font-weight: bold;
+  }
+}

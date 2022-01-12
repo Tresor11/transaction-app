@@ -1,0 +1,18 @@
+<div class="transaction-widget-cont">
+  <div class="transaction-widget">
+    <%unless @externals%>
+      <div class="group-image thumb">
+        <img src="<%= @group ? @group.icon : transaction.group.icon %>">
+      </div>
+    <%end%>
+      <div class="transaction-info">
+        <p class="d-flex space-b"><span> <%=transaction.name%></span> <span><%=transaction.amount%> $</span></p>
+        <p class="d-flex space-b"><span>Author:</span>  <span> <%=transaction.author.name%></span></p>
+        <span><%= transaction.created_at.strftime("%m/%d/%Y")%></span>
+      </div>
+  </div>
+  <div class="button-widget">
+    <%= link_to 'Edit', edit_transaction_path(transaction), class: "button shadow blue-text" %>
+    <%= button_to 'Delete', transaction_path(transaction), method: :delete, data: { confirm: 'Are you sure?' }, class: "button shadow red-text" %>
+  </div>
+</div>
