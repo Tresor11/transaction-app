@@ -10,7 +10,6 @@ RSpec.describe 'Creating a user', type: :feature do
     fill_in 'Password confirmation', with: 'password'
     click_on 'Sign up'
     expect(page).to have_content('test@test')
-
   end
 
   scenario 'invalid input' do

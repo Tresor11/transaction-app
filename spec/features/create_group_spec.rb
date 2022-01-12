@@ -18,6 +18,6 @@ RSpec.describe 'Creating a Group', type: :feature do
     click_on 'Groups'
     click_on 'New Group'
     click_on 'Create'
-    expect(page).to have_content("please fill in all the required fields")
+    expect(page).to have_content('please fill in all the required fields')
   end
 end
