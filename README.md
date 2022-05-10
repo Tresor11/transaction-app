@@ -1,4 +1,4 @@
-# Transaction app
+# Transaction app.
 
 > This project is a transaction managment app built with Ruby on Rails.
 
