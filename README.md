@@ -8,7 +8,7 @@ This application is made of three models
 - group model
 
 a user can create many transaction and many groups , while creating a transaction they can choose to assign it to specific group or not.
-when a user visit a group index page they can see all the transactions withing that group created by other users
+when a user visit a group index page they can see all the transactions withing that group created by other users.
 
 ## Built With
 
